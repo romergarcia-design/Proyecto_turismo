@@ -1,19 +1,291 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo Santivañez</title>
+
+    <style>
+        /* ===== ESTILOS GENERALES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7f6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* ===== ENCABEZADO ===== */
+        header {
+            background: linear-gradient(rgba(0, 80, 50, 0.75), rgba(0, 80, 50, 0.75)),
+                        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee")
+                        center/cover;
+            min-height: 430px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        header h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        header p {
+            font-size: 22px;
+            max-width: 700px;
+        }
+
+        /* ===== MENÚ ===== */
+        nav {
+            background-color: #064d36;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li a {
+            display: block;
+            color: white;
+            padding: 18px 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav li a:hover {
+            background-color: #0b7a55;
+        }
+
+        /* ===== SECCIONES ===== */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 25px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #064d36;
+            font-size: 34px;
+            margin-bottom: 25px;
+        }
+
+        section > p {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* ===== INICIO ===== */
+        #inicio {
+            background-color: white;
+            max-width: 100%;
+        }
+
+        #inicio p {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* ===== ATRACTIVOS ===== */
+        #atractivos {
+            max-width: 1200px;
+        }
+
+        #atractivos > h2 {
+            margin-bottom: 40px;
+        }
+
+        #atractivos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        #atractivos h2 {
+            grid-column: 1 / -1;
+        }
+
+        article {
+            background: white;
+            border-radius: 12px;
+            padding: 30px 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+            transition: 0.3s;
+            border-top: 5px solid #0b7a55;
+        }
+
+        article:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+        }
+
+        article h3 {
+            color: #064d36;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        article p {
+            color: #555;
+        }
+
+        /* ===== SERVICIOS ===== */
+        #servicios {
+            background-color: #eaf5ef;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        #servicios ul {
+            max-width: 800px;
+            margin: 30px auto 0;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            list-style: none;
+        }
+
+        #servicios li {
+            background: white;
+            padding: 20px 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            color: #064d36;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        /* ===== RUTAS ===== */
+        #rutas {
+            background-color: white;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .ruta-box {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #f1f7f4;
+            border-left: 6px solid #0b7a55;
+            border-radius: 8px;
+        }
+
+        /* ===== CONTACTO ===== */
+        #contacto {
+            background-color: #064d36;
+            max-width: 100%;
+            color: white;
+            text-align: center;
+        }
+
+        #contacto h2 {
+            color: white;
+        }
+
+        #contacto p {
+            margin: 8px 0;
+            font-size: 17px;
+        }
+
+        /* ===== PIE DE PÁGINA ===== */
+        footer {
+            background-color: #032d20;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            #atractivos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            #servicios ul {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header h1 {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #atractivos {
+                grid-template-columns: 1fr;
+            }
+
+            #servicios ul {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav li a {
+                padding: 12px;
+            }
+
+            header {
+                min-height: 350px;
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            header p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 50px 18px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <!-- Encabezado -->
+    <!-- ENCABEZADO -->
     <header>
         <h1>Santivañez - Turismo</h1>
-        <p>Descubre los atractivos turísticos del Municipio de Santivañez</p>
+        <p>
+            Descubre la naturaleza, cultura e historia del Municipio de Santivañez
+        </p>
     </header>
 
-    <!-- Menú -->
+    <!-- MENÚ -->
     <nav>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
@@ -24,9 +296,10 @@
         </ul>
     </nav>
 
-    <!-- Inicio -->
+    <!-- INICIO -->
     <section id="inicio">
         <h2>Bienvenidos a Santivañez</h2>
+
         <p>
             Santivañez es un municipio de la provincia Capinota del departamento
             de Cochabamba, Bolivia. Cuenta con diversos atractivos naturales,
@@ -34,69 +307,121 @@
         </p>
     </section>
 
-    <!-- Atractivos -->
+    <!-- ATRACTIVOS -->
     <section id="atractivos">
+
         <h2>Atractivos Turísticos</h2>
 
         <article>
             <h3>Cascada Dique</h3>
-            <p>Hermosa cascada rodeada de naturaleza.</p>
+            <p>
+                Hermosa cascada rodeada de naturaleza, ideal para disfrutar
+                del paisaje y realizar actividades recreativas.
+            </p>
         </article>
 
         <article>
             <h3>Mirador de Santivañez</h3>
-            <p>Punto panorámico con vista al municipio.</p>
+            <p>
+                Punto panorámico desde donde se puede apreciar el paisaje
+                y diferentes sectores del municipio.
+            </p>
+        </article>
+
+        <article>
+            <h3>Cascada Pampa Churigua</h3>
+            <p>
+                Atractivo natural caracterizado por su entorno natural
+                y paisajes propios de la región.
+            </p>
         </article>
 
         <article>
             <h3>Represa de San Martín</h3>
-            <p>Lugar ideal para actividades recreativas.</p>
+            <p>
+                Lugar de interés natural y paisajístico para visitantes
+                que buscan conocer el entorno del municipio.
+            </p>
         </article>
 
         <article>
             <h3>Baños de Cayacayani</h3>
-            <p>Atractivo natural visitado por turistas.</p>
+            <p>
+                Atractivo natural que forma parte de los lugares turísticos
+                que pueden ser visitados en Santivañez.
+            </p>
         </article>
 
         <article>
             <h3>Hacienda Londo</h3>
-            <p>Sitio histórico y cultural del municipio.</p>
+            <p>
+                Sitio de interés histórico y cultural que forma parte
+                del patrimonio turístico del municipio.
+            </p>
         </article>
+
     </section>
 
-    <!-- Servicios -->
+    <!-- SERVICIOS -->
     <section id="servicios">
+
         <h2>Servicios Turísticos</h2>
+
         <ul>
-            <li>Hospedajes</li>
-            <li>Restaurantes</li>
-            <li>Transporte</li>
-            <li>Artesanías</li>
-            <li>Guías turísticos</li>
+            <li>🏨 Hospedajes</li>
+            <li>🍽️ Restaurantes</li>
+            <li>🚌 Transporte</li>
+            <li>🎨 Artesanías</li>
+            <li>🧭 Guías turísticos</li>
         </ul>
+
     </section>
 
-    <!-- Rutas -->
+    <!-- RUTAS -->
     <section id="rutas">
+
         <h2>Rutas de Acceso</h2>
-        <p>
-            El municipio de Santivañez se encuentra aproximadamente a 23 km
-            de la ciudad de Cochabamba.
-        </p>
+
+        <div class="ruta-box">
+            <p>
+                El municipio de Santivañez se encuentra aproximadamente a
+                23 km de la ciudad de Cochabamba.
+            </p>
+
+            <p>
+                Desde Cochabamba se puede acceder al municipio mediante
+                las principales vías de comunicación de la región.
+            </p>
+        </div>
+
     </section>
 
-    <!-- Contacto -->
+    <!-- CONTACTO -->
     <section id="contacto">
+
         <h2>Contacto</h2>
-        <p>Unidad de Turismo - Gobierno Autónomo Municipal de Santivañez</p>
-        <p>Email: turismo@santivanez.gob.bo</p>
-        <p>Teléfono: +591 70000000</p>
+
+        <p>
+            Unidad de Turismo - Gobierno Autónomo Municipal de Santivañez
+        </p>
+
+        <p>
+            Email: turismo@santivanez.gob.bo
+        </p>
+
+        <p>
+            Teléfono: +591 70000000
+        </p>
+
     </section>
 
-    <!-- Pie de página -->
+    <!-- PIE DE PÁGINA -->
     <footer>
-        <p>&copy; 2026 Turismo Santivañez - Todos los derechos reservados.</p>
+        <p>
+            &copy; 2026 Turismo Santivañez - Todos los derechos reservados.
+        </p>
     </footer>
 
 </body>
 </html>
+```
