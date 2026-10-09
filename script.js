@@ -16,7 +16,10 @@ function cambiarModo() {
 
 
 function mostrarMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("activo");
+    document.getElementById("menu").classList.toggle("activo");
+}
+
+function cerrarMenu() {
+    document.getElementById("menu").classList.remove("activo");
 }
 
