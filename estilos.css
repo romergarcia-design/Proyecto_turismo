@@ -174,8 +174,11 @@ body.noche footer {
 }
 
 
+/* COMPUTADORA: mostrar enlaces y ocultar hamburguesa */
+#botonMenu {
+    display: none;
+}
 
-/* Menú normal para computadora */
 #menu {
     display: flex;
     justify-content: center;
@@ -187,19 +190,9 @@ body.noche footer {
     text-decoration: none;
 }
 
-/* Botón hamburguesa oculto en computadora */
-#botonMenu {
-    display: none;
-}
-
-/* Solo para celulares */
+/* CELULAR: ocultar enlaces y mostrar hamburguesa */
 @media screen and (max-width: 768px) {
 
-    header {
-        position: relative;
-    }
-
-    /* Mostrar el botón hamburguesa */
     #botonMenu {
         display: block;
         margin: 10px auto;
@@ -212,17 +205,14 @@ body.noche footer {
         cursor: pointer;
     }
 
-    /* Ocultar los enlaces inicialmente */
     #menu {
         display: none;
         flex-direction: column;
         align-items: center;
         gap: 0;
         background-color: darkgreen;
-        margin-top: 10px;
     }
 
-    /* Mostrar los enlaces al tocar ☰ */
     #menu.activo {
         display: flex;
     }
@@ -230,7 +220,6 @@ body.noche footer {
     #menu a {
         display: block;
         width: 100%;
-        box-sizing: border-box;
         padding: 12px;
         text-align: center;
     }
