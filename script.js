@@ -17,3 +17,9 @@ function cambiarModo() {
         boton.title = "Activar modo noche";
     }
 }
+
+
+function mostrarMenu() {
+    let menu = document.getElementById("menu");
+    menu.classList.toggle("activo");
+}
