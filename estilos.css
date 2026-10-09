@@ -37,3 +37,35 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+
+
+/* Botón día y noche */
+button {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Modo noche */
+body.noche {
+    background-color: #222;
+    color: white;
+}
+
+body.noche section {
+    background-color: #333;
+    color: white;
+}
+
+body.noche h2 {
+    color: lightgreen;
+}
+
+body.noche footer {
+    background-color: black;
+}
