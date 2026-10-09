@@ -15,10 +15,6 @@ function cambiarModo() {
 }
 
 
-function mostrarMenu() {
-    let menu = document.getElementById("menu");
-    menu.classList.toggle("activo");
-}
 
 const boton = document.getElementById("btn-menu");
 const menu = document.getElementById("menu");
