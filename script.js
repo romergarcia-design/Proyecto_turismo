@@ -15,19 +15,12 @@ function cambiarModo() {
 }
 
 
+function mostrarMenu() {
+    document.getElementById("menu").classList.toggle("activo");
+}
 
-const boton = document.getElementById("btn-menu");
-const menu = document.getElementById("menu");
+function cerrarMenu() {
+    document.getElementById("menu").classList.remove("activo");
+}
 
-boton.addEventListener("click", function () {
-    menu.classList.toggle("abierto");
 
-    const abierto = menu.classList.contains("abierto");
-
-    boton.textContent = abierto ? "✕" : "☰";
-    boton.setAttribute("aria-expanded", abierto);
-    boton.setAttribute(
-        "aria-label",
-        abierto ? "Cerrar menú" : "Abrir menú"
-    );
-});

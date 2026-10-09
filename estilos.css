@@ -176,54 +176,78 @@ body.noche footer {
 
 
 
-/* Menú para computadora */
-.menu-navegacion ul {
+/* Encabezado */
+header {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Menú normal en computadora */
+nav {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    list-style: none;
-    padding: 0;
-    margin: 15px 0;
+    align-items: center;
+    gap: 20px;
 }
 
-.menu-navegacion a {
-    text-decoration: none;
+nav a {
     color: white;
-    font-weight: bold;
+    text-decoration: none;
+    padding: 8px;
 }
 
-#btn-menu {
+/* Botón hamburguesa oculto en computadora */
+.menu-btn {
     display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
-/* Menú para celulares */
+/* Celulares y tabletas */
 @media (max-width: 768px) {
-    .menu-navegacion {
+    header {
         position: relative;
+        text-align: center;
+        padding: 15px;
     }
 
-    #btn-menu {
+    header h1 {
+        font-size: 23px;
+        margin: 5px 45px 10px;
+    }
+
+    /* Botón dentro del encabezado */
+    .menu-btn {
         display: block;
-        margin: 10px auto;
-        font-size: 30px;
-        color: white;
-        background: transparent;
-        border: none;
-        cursor: pointer;
+        position: absolute;
+        top: 12px;
+        right: 15px;
     }
 
-    .menu-navegacion ul {
+    /* Menú oculto inicialmente */
+    nav {
         display: none;
         flex-direction: column;
-        align-items: center;
-        gap: 0;
+        gap: 5px;
+        margin-top: 15px;
+        background-color: darkgreen;
+        padding: 10px;
+        border-radius: 8px;
     }
 
-    .menu-navegacion ul.abierto {
+    /* Mostrar al hacer clic */
+    nav.activo {
         display: flex;
     }
 
-    .menu-navegacion ul li {
-        padding: 12px;
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
     }
 }

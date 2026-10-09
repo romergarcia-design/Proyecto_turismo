@@ -17,23 +17,21 @@
 </head>
 
 <body>
+        
         <header>
-            <h1>Santivañez - Turismo</h1>
+             <h1>Santivañez - Turismo</h1>
 
-            <nav class="menu-navegacion">
-                <button id="btn-menu" aria-label="Abrir menú"
-                        aria-expanded="false">
-                    ☰
-                </button>
+                <button class="menu-btn" onclick="mostrarMenu()">☰</button>
 
-                <ul id="menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#atractivos">Atractivos</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-         </header>
+                <nav id="menu">
+                    <a href="#inicio" onclick="cerrarMenu()">Inicio</a>
+                    <a href="#atractivos" onclick="cerrarMenu()">Atractivos</a>
+                    <a href="#servicios" onclick="cerrarMenu()">Servicios</a>
+                    <a href="#rutas" onclick="cerrarMenu()">Rutas</a>
+                    <a href="#contacto" onclick="cerrarMenu()">Contacto</a>
+                </nav>
+        </header>
+
     <main>
 
            <section id="inicio">
