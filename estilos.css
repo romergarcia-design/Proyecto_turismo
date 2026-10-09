@@ -198,8 +198,8 @@ nav a {
     padding: 8px;
 }
 
-/* Botón hamburguesa oculto en computadora */
-.menu-btn {
+
+#botonMenu {
     display: none;
     background: none;
     color: white;
@@ -208,46 +208,34 @@ nav a {
     cursor: pointer;
 }
 
-/* Celulares y tabletas */
-@media (max-width: 768px) {
-    header {
-        position: relative;
-        text-align: center;
-        padding: 15px;
-    }
-
-    header h1 {
-        font-size: 23px;
-        margin: 5px 45px 10px;
-    }
-
-    /* Botón dentro del encabezado */
-    .menu-btn {
+@media screen and (max-width: 768px) {
+    #botonMenu {
         display: block;
         position: absolute;
-        top: 12px;
+        top: 15px;
         right: 15px;
     }
 
-    /* Menú oculto inicialmente */
-    nav {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        margin-top: 15px;
-        background-color: darkgreen;
-        padding: 10px;
-        border-radius: 8px;
+    header {
+        position: relative;
     }
 
-    /* Mostrar al hacer clic */
-    nav.activo {
+    #menu {
+        display: none;
+        flex-direction: column;
+        background-color: darkgreen;
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    #menu.activo {
         display: flex;
     }
 
-    nav a {
-        display: block;
-        width: 100%;
-        padding: 10px;
+    #menu a {
+        color: white;
+        text-decoration: none;
+        padding: 12px;
     }
 }
+

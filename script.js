@@ -16,11 +16,7 @@ function cambiarModo() {
 
 
 function mostrarMenu() {
-    document.getElementById("menu").classList.toggle("activo");
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("activo");
 }
-
-function cerrarMenu() {
-    document.getElementById("menu").classList.remove("activo");
-}
-
 
