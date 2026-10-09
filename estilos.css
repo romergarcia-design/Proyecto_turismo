@@ -40,6 +40,104 @@ footer {
 
 
 
+/* Adaptación para celulares, tabletas y computadoras */
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+section {
+    overflow-wrap: break-word;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    padding: 5px;
+}
+
+/* Tabletas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    header {
+        padding: 15px 8px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav a {
+        display: block;
+        padding: 5px;
+    }
+
+    main {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p, li {
+        font-size: 14px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+
+    footer {
+        padding: 12px;
+        font-size: 13px;
+    }
+}
+
+
+
+
 /* Botón día y noche */
 button {
     background-color: white;
