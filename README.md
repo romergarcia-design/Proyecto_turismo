@@ -1,4 +1,2 @@
 # Proyecto_turismo
-promoción de lugares turísticos
-hola mundo
-lugares turisticos 
+proyecto consiste en desarrollar un sitio web para promocionar los atractivos turísticos de Municipio de Santivañez, mostrando información, fotografías, ubicación y rutas de acceso para que los visitantes puedan conocer y planificar sus recorridos.
