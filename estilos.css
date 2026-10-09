@@ -172,3 +172,44 @@ body.noche h2 {
 body.noche footer {
     background-color: #000;
 }
+
+
+/* Botón hamburguesa */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Menú normal */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* Celulares y tabletas */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        margin: 10px auto;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.activo {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+    }
+}
