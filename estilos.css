@@ -40,7 +40,7 @@ footer {
 
 
 
-/* Adaptación para celulares, tabletas y computadoras */
+/* Adaptaciocn celulares, tabletas y computadoras,etc */
 
 * {
     box-sizing: border-box;
@@ -138,7 +138,7 @@ nav a {
 
 
 
-/* Botón día y noche */
+/* Boton modo claro y oscuro */
 #botonModo {
     background-color: transparent;
     color: white;
@@ -190,7 +190,7 @@ body.noche footer {
     text-decoration: none;
 }
 
-/* CELULAR: ocultar enlaces y mostrar hamburguesa */
+/* hamburguesa */
 @media screen and (max-width: 768px) {
 
     #botonMenu {
