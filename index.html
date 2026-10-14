@@ -1,40 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Turismo Santivañez</title>
-    
-    <button id="botonModo" onclick="cambiarModo()" title="Cambiar modo">
-    🌙 
-    </button>
 
     <link rel="stylesheet" href="estilos.css">
-    
-
-
 </head>
 
 <body>
-        
-        <header>
-                <h1>Santivañez - Turismo</h1>
 
-                    <button id="botonMenu" onclick="mostrarMenu()">☰</button>
+    <header>
+        <h1>Santivañez - Turismo</h1>
 
-                    <nav id="menu">
-                        <a href="#inicio" onclick="cerrarMenu()">Inicio</a>
-                        <a href="#atractivos" onclick="cerrarMenu()">Atractivos</a>
-                        <a href="#servicios" onclick="cerrarMenu()">Servicios</a>
-                        <a href="#rutas" onclick="cerrarMenu()">Rutas</a>
-                        <a href="#contacto" onclick="cerrarMenu()">Contacto</a>
-                </nav>
-        </header>
+        <!-- Botón para cambiar el modo día/noche -->
+        <button
+            id="botonModo"
+            onclick="cambiarModo()"
+            title="Cambiar modo">
+            🌙
+        </button>
+
+        <!-- Botón del menú para celulares -->
+        <button
+            id="botonMenu"
+            onclick="mostrarMenu()"
+            aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <!-- Menú de navegación -->
+        <nav id="menu">
+            <a href="#inicio" onclick="cerrarMenu()">Inicio</a>
+            <a href="#atractivos" onclick="cerrarMenu()">Atractivos</a>
+            <a href="#servicios" onclick="cerrarMenu()">Servicios</a>
+            <a href="#rutas" onclick="cerrarMenu()">Rutas</a>
+            <a href="#contacto" onclick="cerrarMenu()">Contacto</a>
+        </nav>
+    </header>
 
     <main>
 
-           <section id="inicio">
+        <!-- SECCIÓN INICIO -->
+        <section id="inicio">
             <h2>Bienvenidos a Santivañez</h2>
 
             <p>
@@ -48,7 +59,8 @@
             </p>
         </section>
 
-           <section id="atractivos">
+        <!-- SECCIÓN ATRACTIVOS TURÍSTICOS -->
+        <section id="atractivos">
             <h2>Atractivos Turísticos</h2>
 
             <ul>
@@ -61,6 +73,7 @@
             </ul>
         </section>
 
+        <!-- SECCIÓN SERVICIOS -->
         <section id="servicios">
             <h2>Servicios Turísticos</h2>
 
@@ -73,6 +86,7 @@
             </ul>
         </section>
 
+        <!-- SECCIÓN RUTAS -->
         <section id="rutas">
             <h2>Rutas de Acceso</h2>
 
@@ -83,15 +97,64 @@
 
             <p>
                 Desde Cochabamba se puede acceder al municipio
-                mediante las principales vías de comunicación de la región.
+                mediante las principales vías de comunicación
+                de la región.
             </p>
         </section>
 
-            <section id="contacto">
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto">
             <h2>Contacto</h2>
 
             <p>
-                Unidad de Turismo - Gobierno Autónomo Municipal de Santivañez
+                Escríbenos o visítanos. ¡Te esperamos!
+            </p>
+
+            <form id="form-contacto" onsubmit="enviarFormulario(event)">
+
+                <label for="nombre">Nombre:</label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Ingresa tu nombre"
+                    required
+                >
+
+                <label for="correo">Correo electrónico:</label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="ejemplo@correo.com"
+                    required
+                >
+
+                <label for="mensaje">Mensaje:</label>
+
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="4"
+                    placeholder="Escribe tu mensaje aquí..."
+                    required
+                ></textarea>
+
+                <button type="submit">Enviar</button>
+
+                <p
+                    id="aviso-contacto"
+                    class="aviso"
+                    aria-live="polite">
+                </p>
+
+            </form>
+
+            <p>
+                Unidad de Turismo - Gobierno Autónomo Municipal
+                de Santivañez
             </p>
 
             <p>
@@ -104,12 +167,18 @@
         </section>
 
     </main>
+
+    <!-- PIE DE PÁGINA -->
     <footer>
         <p>
-            &copy; 2026 Turismo Santivañez - Todos los derechos reservados.
+            &copy; 2026 Turismo Santivañez - Todos los derechos
+            reservados.
         </p>
     </footer>
 
+    <!-- Archivo JavaScript -->
     <script src="script.js"></script>
+
 </body>
+
 </html>
