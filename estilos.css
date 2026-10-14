@@ -262,118 +262,144 @@ body.noche footer {
     color: #1a7f4f;
 }
 
-
-
-/* ===== CONTACTO ===== */
+/* ===== SECCIÓN CONTACTO ===== */
 
 #contacto {
     background-color: white;
     padding: 25px;
-    border-radius: 12px;
     margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
 }
 
-/* Título */
+/* Título de contacto */
 #contacto h2 {
     color: green;
     text-align: center;
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-/* Texto */
-#contacto p {
+/* Texto de presentación */
+#contacto > p {
     text-align: center;
+    line-height: 1.6;
+    color: #333;
 }
 
 /* Formulario */
 #form-contacto {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 550px;
+    margin: 25px auto;
+    padding: 25px;
     background-color: #f1f8f1;
-    border-radius: 10px;
     border: 1px solid #c8e6c9;
+    border-radius: 12px;
 }
 
 /* Etiquetas */
 #form-contacto label {
     display: block;
-    margin-top: 12px;
-    margin-bottom: 6px;
+    margin-top: 15px;
+    margin-bottom: 7px;
     color: #176b35;
     font-weight: bold;
 }
 
-/* Nombre y correo */
+/* Campo de nombre y correo */
 #form-contacto input {
+    display: block;
     width: 100%;
     padding: 12px;
-    border: 1px solid #aaa;
-    border-radius: 6px;
+    border: 1px solid #bdbdbd;
+    border-radius: 7px;
     font-size: 15px;
+    background-color: white;
+    color: #222;
 }
 
-/* Mensaje */
+/* Campo de mensaje */
 #form-contacto textarea {
+    display: block;
     width: 100%;
     padding: 12px;
-    border: 1px solid #aaa;
-    border-radius: 6px;
+    border: 1px solid #bdbdbd;
+    border-radius: 7px;
     font-size: 15px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #222;
     resize: vertical;
 }
 
-/* Efecto al seleccionar */
+/* Efecto al seleccionar los campos */
 #form-contacto input:focus,
 #form-contacto textarea:focus {
     outline: none;
     border-color: green;
-    box-shadow: 0 0 5px #a5d6a7;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.3);
 }
 
 /* Botón Enviar */
-#form-contacto button {
+#form-contacto button[type="submit"] {
+    display: block;
     width: 100%;
-    padding: 12px;
-    margin-top: 18px;
+    padding: 13px;
+    margin-top: 20px;
     background-color: green;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 7px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 /* Efecto del botón */
-#form-contacto button:hover {
+#form-contacto button[type="submit"]:hover {
     background-color: darkgreen;
 }
 
-/* Avisos */
+/* Aviso del formulario */
 #form-contacto .aviso {
     display: none;
     padding: 12px;
-    border-radius: 6px;
-    margin-top: 12px;
+    margin-top: 15px;
+    border-radius: 7px;
+    text-align: center;
+    font-weight: bold;
 }
 
-/* Error */
+/* Mensaje de error */
 #form-contacto .aviso.error {
     display: block;
     color: #b3261e;
     background-color: #fde8e7;
+    border: 1px solid #efb3af;
 }
 
-/* Enviado correctamente */
+/* Mensaje de éxito */
 #form-contacto .aviso.exito {
     display: block;
     color: #176b35;
     background-color: #e0f2e5;
+    border: 1px solid #a5d6a7;
 }
 
-/* Modo oscuro */
+/* Datos de la institución */
+#contacto > p:last-child {
+    font-weight: bold;
+}
+
+/* ===== MODO OSCURO ===== */
+
 body.noche #contacto {
     background-color: #242424;
+    color: white;
+}
+
+body.noche #contacto > p {
     color: white;
 }
 
@@ -393,13 +419,23 @@ body.noche #form-contacto textarea {
     border-color: #666;
 }
 
-/* Celulares */
+/* ===== ADAPTACIÓN A CELULARES ===== */
+
 @media (max-width: 480px) {
     #contacto {
         padding: 15px;
     }
 
+    #contacto h2 {
+        font-size: 23px;
+    }
+
     #form-contacto {
         padding: 15px;
+    }
+
+    #form-contacto input,
+    #form-contacto textarea {
+        font-size: 16px;
     }
 }
