@@ -223,7 +223,8 @@ body.noche footer {
         padding: 12px;
         text-align: center;
     }
-}```css
+}
+
 /* Avisos del formulario de contacto */
 .aviso {
     display: none;
@@ -259,4 +260,146 @@ body.noche footer {
 .aviso.exito {
     display: block;
     color: #1a7f4f;
+}
+
+
+
+/* ===== CONTACTO ===== */
+
+#contacto {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Título */
+#contacto h2 {
+    color: green;
+    text-align: center;
+}
+
+/* Texto */
+#contacto p {
+    text-align: center;
+}
+
+/* Formulario */
+#form-contacto {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f1f8f1;
+    border-radius: 10px;
+    border: 1px solid #c8e6c9;
+}
+
+/* Etiquetas */
+#form-contacto label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    color: #176b35;
+    font-weight: bold;
+}
+
+/* Nombre y correo */
+#form-contacto input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+/* Mensaje */
+#form-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 15px;
+    resize: vertical;
+}
+
+/* Efecto al seleccionar */
+#form-contacto input:focus,
+#form-contacto textarea:focus {
+    outline: none;
+    border-color: green;
+    box-shadow: 0 0 5px #a5d6a7;
+}
+
+/* Botón Enviar */
+#form-contacto button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 18px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Efecto del botón */
+#form-contacto button:hover {
+    background-color: darkgreen;
+}
+
+/* Avisos */
+#form-contacto .aviso {
+    display: none;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 12px;
+}
+
+/* Error */
+#form-contacto .aviso.error {
+    display: block;
+    color: #b3261e;
+    background-color: #fde8e7;
+}
+
+/* Enviado correctamente */
+#form-contacto .aviso.exito {
+    display: block;
+    color: #176b35;
+    background-color: #e0f2e5;
+}
+
+/* Modo oscuro */
+body.noche #contacto {
+    background-color: #242424;
+    color: white;
+}
+
+body.noche #form-contacto {
+    background-color: #303030;
+    border-color: #555;
+}
+
+body.noche #form-contacto label {
+    color: lightgreen;
+}
+
+body.noche #form-contacto input,
+body.noche #form-contacto textarea {
+    background-color: #222;
+    color: white;
+    border-color: #666;
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    #contacto {
+        padding: 15px;
+    }
+
+    #form-contacto {
+        padding: 15px;
+    }
 }
