@@ -224,3 +224,20 @@ body.noche footer {
         text-align: center;
     }
 }
+/* Avisos del formulario de contacto */
+.aviso {
+    display: none;
+    margin-top: 14px;
+}
+
+/* Mensaje cuando ocurre un error */
+.aviso.error {
+    display: block;
+    color: #b3261e;
+}
+
+/* Mensaje cuando el envío es exitoso */
+.aviso.exito {
+    display: block;
+    color: #1a7f4f;
+}
