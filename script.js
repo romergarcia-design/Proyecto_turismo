@@ -53,7 +53,7 @@ function enviarFormulario(event) {
     } else {
         avisoContacto.textContent =
             "¡Gracias, " + nombre +
-            "! Recibimos tus datos. Para enviar el mensaje al correo de Turismo, falta conectar un servicio de envío.";
+            "! Recibimos tus datos. ";
 
         avisoContacto.classList.add("exito");
         avisoContacto.classList.remove("error");
