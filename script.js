@@ -26,19 +26,38 @@ function cerrarMenu() {
     document.getElementById("menu").classList.remove("activo");
 }
 
-/* funcion contactos  */
+/*contactos */
+
+const formularioContacto = document.querySelector("#form-contacto");
+const avisoContacto = document.querySelector("#aviso-contacto");
+
 function enviarFormulario(event) {
     event.preventDefault();
 
-    const nombre = document.getElementById("nombre").value.trim();
-    const aviso = document.getElementById("aviso-contacto");
+    const nombre = document.querySelector("#nombre").value.trim();
+    const correo = document.querySelector("#correo").value.trim();
+    const mensaje = document.querySelector("#mensaje").value.trim();
 
     if (nombre === "") {
-        aviso.textContent = "Por favor, ingresa tu nombre.";
-        aviso.className = "aviso error";
-        return;
-    }
+        avisoContacto.textContent = "Falta tu nombre, caserito.";
+        avisoContacto.classList.add("error");
+        avisoContacto.classList.remove("exito");
+    } else if (correo === "") {
+        avisoContacto.textContent = "Falta tu correo electrónico.";
+        avisoContacto.classList.add("error");
+        avisoContacto.classList.remove("exito");
+    } else if (mensaje === "") {
+        avisoContacto.textContent = "Falta escribir tu mensaje.";
+        avisoContacto.classList.add("error");
+        avisoContacto.classList.remove("exito");
+    } else {
+        avisoContacto.textContent =
+            "¡Gracias, " + nombre +
+            "! Recibimos tus datos. Para enviar el mensaje al correo de Turismo, falta conectar un servicio de envío.";
 
-    aviso.textContent = "¡Gracias, " + nombre + "! Tu mensaje está listo.";
-    aviso.className = "aviso exito";
+        avisoContacto.classList.add("exito");
+        avisoContacto.classList.remove("error");
+    }
 }
+
+formularioContacto.addEventListener("submit", enviarFormulario);
