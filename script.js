@@ -53,7 +53,7 @@ function enviarFormulario(event) {
     } else {
         avisoContacto.textContent =
             "¡Gracias, " + nombre +
-            "! Recibimos tus datos. ";
+            "! Recibimos tu mensaje. ";
 
         avisoContacto.classList.add("exito");
         avisoContacto.classList.remove("error");
