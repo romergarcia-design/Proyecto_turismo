@@ -26,3 +26,19 @@ function cerrarMenu() {
     document.getElementById("menu").classList.remove("activo");
 }
 
+/* funcion contactos  */
+function enviarFormulario(event) {
+    event.preventDefault();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const aviso = document.getElementById("aviso-contacto");
+
+    if (nombre === "") {
+        aviso.textContent = "Por favor, ingresa tu nombre.";
+        aviso.className = "aviso error";
+        return;
+    }
+
+    aviso.textContent = "¡Gracias, " + nombre + "! Tu mensaje está listo.";
+    aviso.className = "aviso exito";
+}
