@@ -28,7 +28,6 @@ function cerrarMenu() {
 
 /*contactos */
 
-
 const formularioContacto = document.querySelector("#form-contacto");
 const avisoContacto = document.querySelector("#aviso-contacto");
 
@@ -39,16 +38,26 @@ function enviarFormulario(event) {
     const correo = document.querySelector("#correo").value.trim();
     const mensaje = document.querySelector("#mensaje").value.trim();
 
-    if (nombre === "" || correo === "" || mensaje === "") {
-        avisoContacto.textContent = "Por favor, completa todos los campos.";
-        avisoContacto.className = "aviso error";
-        return;
+    if (nombre === "") {
+        avisoContacto.textContent = "Falta tu nombre, caserito.";
+        avisoContacto.classList.add("error");
+        avisoContacto.classList.remove("exito");
+    } else if (correo === "") {
+        avisoContacto.textContent = "Falta tu correo electrónico.";
+        avisoContacto.classList.add("error");
+        avisoContacto.classList.remove("exito");
+    } else if (mensaje === "") {
+        avisoContacto.textContent = "Falta escribir tu mensaje.";
+        avisoContacto.classList.add("error");
+        avisoContacto.classList.remove("exito");
+    } else {
+        avisoContacto.textContent =
+            "¡Gracias, " + nombre +
+            "! Recibimos tus datos. Para enviar el mensaje al correo de Turismo, falta conectar un servicio de envío.";
+
+        avisoContacto.classList.add("exito");
+        avisoContacto.classList.remove("error");
     }
-
-    avisoContacto.textContent = "¡Tu mensaje fue enviado correctamente!";
-    avisoContacto.className = "aviso exito";
-
-    formularioContacto.reset();
 }
 
 formularioContacto.addEventListener("submit", enviarFormulario);
