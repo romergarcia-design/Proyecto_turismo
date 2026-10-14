@@ -263,3 +263,161 @@ body.noche footer {
 }
 
 
+/* ===== ESTILOS DE CONTACTO ===== */
+
+#contacto {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#contacto h2 {
+    color: green;
+    text-align: center;
+    font-size: 28px;
+}
+
+#contacto > p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Formulario */
+#form-contacto {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #f1f8f1;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+}
+
+/* Etiquetas */
+#form-contacto label {
+    display: block;
+    color: #176b35;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Campos de texto */
+#form-contacto input,
+#form-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: white;
+    color: #222;
+}
+
+/* Área del mensaje */
+#form-contacto textarea {
+    resize: vertical;
+}
+
+/* Efecto al seleccionar los campos */
+#form-contacto input:focus,
+#form-contacto textarea:focus {
+    outline: none;
+    border-color: green;
+    box-shadow: 0 0 5px #a5d6a7;
+}
+
+/* Espacios de los saltos de línea */
+#form-contacto br {
+    display: block;
+    content: "";
+    margin-bottom: 10px;
+}
+
+/* Botón Enviar */
+#form-contacto button[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#form-contacto button[type="submit"]:hover {
+    background-color: darkgreen;
+}
+
+/* Mensajes de aviso */
+#form-contacto .aviso {
+    display: none;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* Mensaje de error */
+#form-contacto .aviso.error {
+    display: block;
+    background-color: #fde8e7;
+    color: #b3261e;
+}
+
+/* Mensaje de envío correcto */
+#form-contacto .aviso.exito {
+    display: block;
+    background-color: #e0f2e5;
+    color: #176b35;
+}
+
+/* Modo oscuro */
+body.noche #contacto {
+    background-color: #242424;
+    color: white;
+}
+
+body.noche #contacto > p {
+    color: white;
+}
+
+body.noche #form-contacto {
+    background-color: #303030;
+    border-color: #555;
+}
+
+body.noche #form-contacto label {
+    color: lightgreen;
+}
+
+body.noche #form-contacto input,
+body.noche #form-contacto textarea {
+    background-color: #222;
+    color: white;
+    border-color: #666;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 480px) {
+    #contacto {
+        padding: 15px;
+    }
+
+    #contacto h2 {
+        font-size: 23px;
+    }
+
+    #form-contacto {
+        padding: 15px;
+    }
+
+    #form-contacto input,
+    #form-contacto textarea {
+        font-size: 16px;
+    }
+}
+
