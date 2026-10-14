@@ -263,161 +263,200 @@ body.noche footer {
 }
 
 
-/* ===== ESTILOS DE CONTACTO ===== */
+
+/* ===== DISEÑO PROFESIONAL DE CONTACTO ===== */
 
 #contacto {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #f0fdf4, #ffffff);
+    padding: 40px 25px;
+    margin: 25px auto;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 80, 30, 0.12);
+    border: 1px solid #d7ead9;
 }
 
+/* Título */
 #contacto h2 {
-    color: green;
+    color: #166534;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
+    margin-bottom: 12px;
 }
 
-#contacto > p {
+/* Texto de presentación */
+#contacto > p:first-of-type {
     text-align: center;
-    line-height: 1.6;
+    color: #526357;
+    font-size: 16px;
+    margin-bottom: 25px;
 }
 
-/* Formulario */
+/* Tarjeta del formulario */
 #form-contacto {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 25px;
-    background-color: #f1f8f1;
-    border: 1px solid #c8e6c9;
-    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e9e0;
 }
 
 /* Etiquetas */
 #form-contacto label {
     display: block;
-    color: #176b35;
+    color: #245c35;
+    font-size: 15px;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin: 15px 0 8px;
 }
 
-/* Campos de texto */
+/* Campos */
 #form-contacto input,
 #form-contacto textarea {
+    display: block;
     width: 100%;
-    padding: 12px;
-    border: 1px solid #aaa;
-    border-radius: 6px;
+    padding: 14px;
+    border: 1px solid #cbd5cb;
+    border-radius: 9px;
+    background-color: #f9fcf9;
+    color: #222;
     font-family: Arial, sans-serif;
     font-size: 15px;
-    background-color: white;
-    color: #222;
+    transition: 0.3s;
+}
+
+/* Efecto al seleccionar */
+#form-contacto input:focus,
+#form-contacto textarea:focus {
+    outline: none;
+    border-color: #16a34a;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
 }
 
 /* Área del mensaje */
 #form-contacto textarea {
+    min-height: 140px;
     resize: vertical;
 }
 
-/* Efecto al seleccionar los campos */
-#form-contacto input:focus,
-#form-contacto textarea:focus {
-    outline: none;
-    border-color: green;
-    box-shadow: 0 0 5px #a5d6a7;
-}
-
-/* Espacios de los saltos de línea */
-#form-contacto br {
-    display: block;
-    content: "";
-    margin-bottom: 10px;
-}
-
-/* Botón Enviar */
+/* Botón enviar */
 #form-contacto button[type="submit"] {
+    display: block;
     width: 100%;
-    padding: 13px;
-    background-color: green;
-    color: white;
+    padding: 15px;
+    margin-top: 22px;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #15803d, #22a34a);
+    color: white;
+    font-size: 17px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(21, 128, 61, 0.2);
+    transition: 0.3s;
 }
 
 #form-contacto button[type="submit"]:hover {
-    background-color: darkgreen;
+    background: linear-gradient(135deg, #166534, #15803d);
+    transform: translateY(-2px);
 }
 
-/* Mensajes de aviso */
+/* Avisos del formulario */
 #form-contacto .aviso {
     display: none;
-    padding: 12px;
-    border-radius: 6px;
-    margin-top: 12px;
+    padding: 14px;
+    margin-top: 15px;
+    border-radius: 9px;
     text-align: center;
+    font-weight: bold;
 }
 
-/* Mensaje de error */
+/* Error */
 #form-contacto .aviso.error {
     display: block;
-    background-color: #fde8e7;
-    color: #b3261e;
+    color: #b91c1c;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
 }
 
-/* Mensaje de envío correcto */
+/* Mensaje correcto */
 #form-contacto .aviso.exito {
     display: block;
-    background-color: #e0f2e5;
-    color: #176b35;
+    color: #166534;
+    background-color: #dcfce7;
+    border: 1px solid #86efac;
 }
 
-/* Modo oscuro */
+/* Datos de la institución */
+#contacto > p:not(:first-of-type) {
+    text-align: center;
+    color: #3f5143;
+    font-size: 15px;
+    margin: 12px 0;
+}
+
+/* ===== MODO OSCURO ===== */
+
 body.noche #contacto {
-    background-color: #242424;
-    color: white;
+    background: #1b2a20;
+    border-color: #354b3a;
+}
+
+body.noche #contacto h2 {
+    color: #86efac;
 }
 
 body.noche #contacto > p {
-    color: white;
+    color: #e0e7e1;
 }
 
 body.noche #form-contacto {
-    background-color: #303030;
-    border-color: #555;
+    background-color: #26352b;
+    border-color: #405346;
 }
 
 body.noche #form-contacto label {
-    color: lightgreen;
+    color: #bbf7d0;
 }
 
 body.noche #form-contacto input,
 body.noche #form-contacto textarea {
-    background-color: #222;
+    background-color: #17231b;
     color: white;
-    border-color: #666;
+    border-color: #536558;
 }
 
-/* Adaptación para celulares */
+body.noche #form-contacto input::placeholder,
+body.noche #form-contacto textarea::placeholder {
+    color: #b7c4b9;
+}
+
+/* ===== DISEÑO PARA CELULARES ===== */
+
 @media (max-width: 480px) {
     #contacto {
-        padding: 15px;
+        padding: 25px 14px;
+        border-radius: 12px;
     }
 
     #contacto h2 {
-        font-size: 23px;
+        font-size: 26px;
     }
 
     #form-contacto {
-        padding: 15px;
+        padding: 20px 15px;
     }
 
     #form-contacto input,
     #form-contacto textarea {
         font-size: 16px;
+        padding: 12px;
+    }
+
+    #form-contacto button[type="submit"] {
+        padding: 14px;
     }
 }
 
