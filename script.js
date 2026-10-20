@@ -53,4 +53,4 @@ function enviarFormulario(event) {
   
 }
 
-formularioContacto.addEventListener("submit", enviarFormulario);
+
