@@ -50,14 +50,7 @@ function enviarFormulario(event) {
         avisoContacto.textContent = "Falta escribir tu mensaje.";
         avisoContacto.classList.add("error");
         avisoContacto.classList.remove("exito");
-    } else {
-        avisoContacto.textContent =
-            "¡Gracias, " + nombre +
-            "! Recibimos tu mensaje ";
-
-        avisoContacto.classList.add("exito");
-        avisoContacto.classList.remove("error");
-    }
+  
 }
 
 formularioContacto.addEventListener("submit", enviarFormulario);
