@@ -109,53 +109,28 @@
                 Escríbenos o visítanos. ¡Te esperamos!
             </p>
 
-            <form id="form-contacto" onsubmit="enviarFormulario(event)">
+            <form id="form-contacto" action="procesar.php" method="POST">
 
-                <label for="nombre">Nombre:</label>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre"
+           placeholder="Ingresa tu nombre" required>
+    <br><br>
 
-                <input
-                    type="text"
-                    id="nombre"
-                    name="nombre"
-                    placeholder="Ingresa tu nombre"
-                    required
-                >
-                <br>
-                <br>
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo"
+           placeholder="ejemplo@correo.com" required>
+    <br><br>
 
-                <label for="correo">Correo electrónico:</label>
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="4"
+              placeholder="Escribe tu mensaje aquí..." required></textarea>
+    <br><br>
 
-                <input
-                    type="email"
-                    id="correo"
-                    name="correo"
-                    placeholder="ejemplo@correo.com"
-                    required
-                >
-                <br>
-                <br>
+    <button type="submit">Enviar</button>
 
-                <label for="mensaje">Mensaje:</label>
+    <p id="aviso-contacto" class="aviso" aria-live="polite"></p>
 
-                <textarea
-                    id="mensaje"
-                    name="mensaje"
-                    rows="4"
-                    placeholder="Escribe tu mensaje aquí..."
-                    required
-                ></textarea>
-                <br>
-                <br>
-
-                <button type="submit">Enviar</button>
-
-                <p
-                    id="aviso-contacto"
-                    class="aviso"
-                    aria-live="polite">
-                </p>
-
-            </form>
+</form>
             <p id="aviso-contacto" class="aviso"></p>
             <p>
                 Unidad de Turismo - Gobierno Autónomo Municipal
