@@ -109,29 +109,25 @@
                 Escríbenos 
             </p>
 
-             <
+             
 
-                <form id="form-contacto" method="POST" action="procesar.php">
+    <form action="procesar.php" method="POST">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required>
+        <br><br>
 
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre"
-                        placeholder="Ingresa tu nombre" required>
-                    <br><br>
+        <label for="correo">Correo electrónico:</label><br>
+        <input type="email" id="correo" name="correo" required>
+        <br><br>
 
-                    <label for="correo">Correo electrónico:</label>
-                    <input type="email" id="correo" name="correo"
-                        placeholder="ejemplo@correo.com" required>
-                    <br><br>
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+        <br><br>
 
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4"
-                            placeholder="Escribe tu consulta sobre Turismo Santivañez..."
-                            required></textarea>
-                    <br><br>
+        <button type="submit">Enviar mensaje</button>
+    </form>
 
-                    <button type="submit">Enviar mensaje</button>
 
-                </form>
 
 
             <p id="aviso-contacto" class="aviso"></p>
